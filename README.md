@@ -31,8 +31,8 @@ W | Wednesday
 TR | Thursday
 F | Friday
 
-5) Run the program. A file dialog will appear. If you don't see it, check your taskbar. It may just be minimized. Select the Excel file with your classes. The program will automatically run once the file is selected and output the calendar file.
+5) Run the program. A file dialog will appear. If you don't see it, check your taskbar. It may just be minimized. Select the Excel file with your classes. The program will automatically run once the file is selected and output the calendar file in the project directory.
 
-6) Import the calendar CSV file. The program exports a CSV file called "CaltechCalOutput.csv". This CSV file contains the events to import into your Google Calendar. The instructions to import a CSV file into Google Calendar [can be found here](https://support.google.com/calendar/answer/37118?hl=en&co=GENIE.Platform%3DDesktop).
+6) Import the calendar CSV file from the project directory. The program exports a CSV file called "CaltechCalOutput.csv". This CSV file contains the events to import into your Google Calendar. The instructions to import a CSV file into Google Calendar [can be found here](https://support.google.com/calendar/answer/37118?hl=en&co=GENIE.Platform%3DDesktop).
 
 **I recommend creating a new calendar to import the birthdays. This way, if there is any issue with the program, you can simply delete the bad calendar, rather than having to sift through your main calendar. Instructions to create a new calendar [can be found here](https://support.google.com/calendar/answer/37095?hl=en)**.
