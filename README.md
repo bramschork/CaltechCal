@@ -1,8 +1,14 @@
 # CaltechCal
 
-1) Program setup. This program has been tested on both MacOS and Windows. Use the latest version of Python and install the required modules using 'pip3 install -r requirements.txt'. You should use a 'venv'.
+1) Program setup. Set the key dates for the term. Change the three variables below to strings in the date format: MM-DD-YYYY
 
-2) Format your class file. Check the 'ExampleClasses.xlsx' file in the 'docs' folder for an example. Here is a brief summary:
+- start_date --> first day of classes
+- end_date --> last day of classes
+- days_off_raw --> Institute holidays when there are not classes
+
+2) Environment setup. This program has been tested on both MacOS and Windows. Use the latest version of Python and install the required modules using 'pip3 install -r requirements.txt'. You should use a 'venv'.
+
+3) Format your class file. Check the 'ExampleClasses.xlsx' file in the 'docs' folder for an example. Here is a brief summary:
 
 Course Name | Course Title | Section/Instructor | Class Days | Class Time | Class Location
 ----------- | ------------ | ------------------ | ---------- | ---------- | --------------
@@ -23,8 +29,8 @@ W | Wednesday
 TR | Thursday
 F | Friday
 
-3) Run the program. A file dialog will appear. If you don't see it, check your taskbar. It may just be minimized. Select the Excel file with your classes. The program will automatically run once the file is selected and output the calendar file.
+4) Run the program. A file dialog will appear. If you don't see it, check your taskbar. It may just be minimized. Select the Excel file with your classes. The program will automatically run once the file is selected and output the calendar file.
 
-4) Import the calendar CSV file. The program exports a CSV file called "CaltechCalOutput.csv". This CSV file contains the events to import into your Google Calendar. The instructions to import a CSV file into Google Calendar [can be found here](https://support.google.com/calendar/answer/37118?hl=en&co=GENIE.Platform%3DDesktop).
+5) Import the calendar CSV file. The program exports a CSV file called "CaltechCalOutput.csv". This CSV file contains the events to import into your Google Calendar. The instructions to import a CSV file into Google Calendar [can be found here](https://support.google.com/calendar/answer/37118?hl=en&co=GENIE.Platform%3DDesktop).
 
 **I recommend creating a new calendar to import the birthdays. This way, if there is any issue with the program, you can simply delete the bad calendar, rather than having to sift through your main calendar. Instructions to create a new calendar [can be found here](https://support.google.com/calendar/answer/37095?hl=en)**.
