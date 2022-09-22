@@ -4,8 +4,17 @@ from tabnanny import check
 import pandas as pd
 import datetime
 import calendar
+import tkinter as tk
+from tkinter import filedialog
+import os
+# Set environment variable
+os.environ['TK_SILENCE_DEPRECATION'] = '1'
 
-path = r"C:\Users\Bram Schork\Desktop\CaltechClasses.xlsx"
+root = tk.Tk()
+root.withdraw()
+
+path = filedialog.askopenfilename()
+
 start_date = '09-27-2022'
 start_date = datetime.datetime.strptime(start_date, '%m-%d-%Y')
 end_date = '12-02-2022'
@@ -44,7 +53,7 @@ for index, row in df.iterrows():
     class_days = row['Class Days']
     class_days = [days_of_week[item] for item in class_days.split(',')]
         
-    while check_date < end_date:
+    while check_date <= end_date:
         # dow = Day of Week
         dow = (calendar.day_name[check_date.weekday()])
         
@@ -70,7 +79,6 @@ for index, row in df.iterrows():
                 locations.append(row['Class Location'])
                 
         check_date += datetime.timedelta(days=1)
-    print(row['Course Name']) 
             
 outputDF['Subject'] = course_names
 outputDF['Description'] = descriptions
@@ -78,5 +86,5 @@ outputDF['Start Date'] = dates
 outputDF['Start  Time'] = start_time
 outputDF['End Time'] = end_time
 outputDF['Location'] = locations
-outputDF.to_csv('output.csv')
-print(outputDF)
+outputDF.to_csv('CaltechCalOutput.csv')
+print('Output File Generated')
