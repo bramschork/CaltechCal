@@ -1,32 +1,48 @@
-# make recitation a separate class
+'''
+Author: Bram Schork
+Date: September 2022
 
-from tabnanny import check
+Version: 0.0.3 BETA
+Version Notes: Currently setup for fall term 2022
+'''
+
+# FALL TERM 2022 DATES
+start_date = '09-27-2022'
+end_date = '12-02-2022'
+days_off_raw = ['11-24-2022', '11-25-2022']
+
+### IMPORTS ###
 import pandas as pd
 import datetime
 import calendar
 import tkinter as tk
 from tkinter import filedialog
 import os
-# Set environment variable
+
+# Set environment variable to silence TK
 os.environ['TK_SILENCE_DEPRECATION'] = '1'
 
+# Create and hide root window for TK. This is needed for the file dialog.
 root = tk.Tk()
 root.withdraw()
 
+# Get class file from user
 path = filedialog.askopenfilename()
 
-start_date = '09-27-2022'
+# Turn date strings into datetime objects
 start_date = datetime.datetime.strptime(start_date, '%m-%d-%Y')
-end_date = '12-02-2022'
 end_date = datetime.datetime.strptime(end_date, '%m-%d-%Y')
-days_off_raw = ['11-24-2022', '11-25-2022']
 days_off = []
 for item in days_off_raw:
        days_off.append(datetime.datetime.strptime(item, '%m-%d-%Y'))
-    
+
+# Convert class file into Pandasa DataFrame
 df = pd.read_excel(path)
+
+# Create empty DataFrame for the output
 outputDF = pd.DataFrame()
 
+# DOW (Days of Week) dictionary
 days_of_week = {
     'M': 'Monday',
     'T': 'Tuesday',
@@ -36,7 +52,7 @@ days_of_week = {
 }
 
 
-# check_date this is a var that I will iterate through to check every day of the term
+# check_date - This is a var that I will iterate through to check every day of the term
 check_date = start_date
 
 # Iterate over every single class
