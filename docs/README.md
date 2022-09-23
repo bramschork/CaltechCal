@@ -8,7 +8,7 @@
 - end_date --> last day of classes
 - days_off_raw --> Institute holidays when there are not classes
 
-3) Environment setup. This program has been tested on both MacOS and Windows. Use the latest version of Python and install the required modules using `pip3 install -r requirements.txt`. You should use a `venv`. To create a virtual environment, you can use `python3 -m venv venv`. To activate your `venv` (on Windows), navbigate to the project directory and run `.\venv\Scripts\activate`.
+3) Environment setup. This program has been tested on both MacOS and Windows. Use the latest version of Python and install the required modules using `pip3 install -r requirements.txt`. You should use a `venv`. To create a virtual environment, you can use `python3 -m venv venv`. To activate your `venv` (on Windows), navigate to the project directory and run `.\venv\Scripts\activate`.
 
 4) Format your class file. Check the `ExampleClasses.xlsx` file in the `docs` folder for an example. Put class recitations on their own row, as the program handles them as a class of their own. Here is a brief summary:
 
