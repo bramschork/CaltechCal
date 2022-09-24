@@ -1,6 +1,6 @@
 # CaltechCal
 
-**Caltech Students! Find a bug? Please submit an issue [here](https://github.com/bramschork/CaltechCal/issues)**. Feel free to make a pull request for new features. Also, please contact me at [bram@bramschork.com](mailto:bram@bramschork.com) for any qquestions or help!
+**Caltech Students! Find a bug? Please submit an issue [here](https://github.com/bramschork/CaltechCal/issues)**. Feel free to make a pull request for new features. Also, please contact me at [bram@bramschork.com](mailto:bram@bramschork.com) for any questions or help!
 
 1) Clone this repository to your computer.
 
