@@ -1,5 +1,7 @@
 # CaltechCal
 
+**Caltech Students! Find a bug, please submit an issue [here](https://github.com/bramschork/CaltechCal/issues)**. Feel free to make a pull request for new features. Feel free to contact me at [bram@bramschork.com](mailto:bram@bramschork.com).
+
 1) Clone this repository to your computer.
 
 2) Program setup. Set the key dates for the term. Change the three variables below to strings in the date format: MM-DD-YYYY
