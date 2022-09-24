@@ -18,7 +18,7 @@ Course Name | Course Title | Section/Instructor | Class Days | Class Time | Clas
 ----------- | ------------ | ------------------ | ---------- | ---------- | --------------
 Class A | Intro to Caltech | 07, President Rosenbaum | MCancel changes,W,F | 11:55-13:15 |  Lecture Hall BAX
 Class A Recitation | Intro to Caltech! | | T | 15:00-16:00 | B270 MRE
-Class B | Intro to Math | 07, President Einstein | T,TR| 10:15-11:00 | 201 BRG
+Class B | Intro to Math | 07, Professor Einstein | T,TR| 10:15-11:00 | 201 BRG
 
 Note: Each calendar event descriotion contains the course title and section/instructor. This information is concatenated in the program.
 
