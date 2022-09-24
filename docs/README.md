@@ -1,6 +1,6 @@
 # CaltechCal
 
-**Caltech Students! Find a bug, please submit an issue [here](https://github.com/bramschork/CaltechCal/issues)**. Feel free to make a pull request for new features. Feel free to contact me at [bram@bramschork.com](mailto:bram@bramschork.com).
+**Caltech Students! Find a bug? Please submit an issue [here](https://github.com/bramschork/CaltechCal/issues)**. Feel free to make a pull request for new features. Feel free to contact me at [bram@bramschork.com](mailto:bram@bramschork.com).
 
 1) Clone this repository to your computer.
 
@@ -16,7 +16,7 @@
 
 Course Name | Course Title | Section/Instructor | Class Days | Class Time | Class Location
 ----------- | ------------ | ------------------ | ---------- | ---------- | --------------
-Class A | Intro to Caltech | 07, President Rosenbaum | M,W,F | 11:55-13:15 |  Lecture Hall BAX
+Class A | Intro to Caltech | 07, President Rosenbaum | MCancel changes,W,F | 11:55-13:15 |  Lecture Hall BAX
 Class A Recitation | Intro to Caltech! | | T | 15:00-16:00 | B270 MRE
 Class B | Intro to Math | 07, President Einstein | T,TR| 10:15-11:00 | 201 BRG
 
