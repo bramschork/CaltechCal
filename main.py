@@ -2,7 +2,7 @@
 Author: Bram Schork
 Date: September 2022
 
-Version: 0.0.3 BETA
+Version: 1.0.0
 Version Notes: Currently setup for fall term 2022
 
 ToDo:
