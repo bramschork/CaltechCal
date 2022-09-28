@@ -4,6 +4,11 @@ Date: September 2022
 
 Version: 0.0.3 BETA
 Version Notes: Currently setup for fall term 2022
+
+ToDo:
+
+ - All for spaces between days of week
+ - Make file explorer window automatically pop to top of all windows
 '''
 
 # FALL TERM 2022 DATES
