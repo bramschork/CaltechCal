@@ -2,13 +2,17 @@
 Author: Bram Schork
 Date: September 2022
 
-Version: 1.0.0
-Version Notes: Currently setup for fall term 2022
+Version: 1.0.1
 
-ToDo:
-
- - All for spaces between days of week
- - Make file explorer window automatically pop to top of all windows
+Version Notes: 
+ - Currently setup for fall term 2022
+ - Program allows for spaces in the days of the week
+ - Program input only accepts CSV files as the input in the file dialogue menu
+ - Added error messages
+ 
+ ToDo:
+  - Error out for inproperly formatted/headered input CSV file
+  - Make file dialogue menu pop to top of other windows
 '''
 
 # FALL TERM 2022 DATES
@@ -23,16 +27,25 @@ import calendar
 import tkinter as tk
 from tkinter import filedialog
 import os
+import sys
 
 # Set environment variable to silence TK
 os.environ['TK_SILENCE_DEPRECATION'] = '1'
 
 # Create and hide root window for TK. This is needed for the file dialog.
 root = tk.Tk()
+root.attributes("-topmost", True)
+root.wm_attributes('-topmost', 1)
+root.lift()
 root.withdraw()
 
 # Get class file from user
-path = filedialog.askopenfilename()
+path = filedialog.askopenfilename(filetypes=(("CSV Files","*.csv"),))
+
+while path == '':
+    print('No file entered. Exiting.')
+    sys.exit(-1)
+
 
 # Turn date strings into datetime objects
 start_date = datetime.datetime.strptime(start_date, '%m-%d-%Y')
@@ -42,7 +55,11 @@ for item in days_off_raw:
        days_off.append(datetime.datetime.strptime(item, '%m-%d-%Y'))
 
 # Convert class file into Pandasa DataFrame
-df = pd.read_excel(path)
+try:
+    df = pd.read_excel(path)
+except FileNotFoundError:
+    print('Error reading file. Exiting.')
+    sys.exit(-1)
 
 # Create empty DataFrame for the output
 outputDF = pd.DataFrame()
@@ -71,7 +88,7 @@ locations = []
 for index, row in df.iterrows():
     check_date = start_date
     # For each class, iterate through each date to add a calendar event for every class
-    class_days = row['Class Days']
+    class_days = row['Class Days'].replace(' ', '')
     class_days = [days_of_week[item] for item in class_days.split(',')]
         
     while check_date <= end_date:

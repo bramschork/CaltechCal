@@ -22,8 +22,6 @@ Class B | Intro to Math | 07, Professor Einstein | T,TR| 10:15-11:00 | 201 BRG
 
 Note: Each calendar event descriotion contains the course title and section/instructor. This information is concatenated in the program.
 
-The "Class Days" column should have no spaces. 
-
 Ex.<br />
 "TR,M" = Good<br />
 "TR, M" = Bad
