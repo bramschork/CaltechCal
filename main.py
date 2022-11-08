@@ -56,7 +56,7 @@ for item in days_off_raw:
 
 # Convert class file into Pandasa DataFrame
 try:
-    df = pd.read_excel(path)
+    df = pd.read_csv(path)
 except FileNotFoundError:
     print('Error reading file. Exiting.')
     sys.exit(-1)
