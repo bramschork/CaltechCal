@@ -16,7 +16,7 @@
 
 Course Name | Course Title | Section/Instructor | Class Days | Class Time | Class Location
 ----------- | ------------ | ------------------ | ---------- | ---------- | --------------
-Class A | Intro to Caltech | 07, President Rosenbaum | MCancel changes,W,F | 11:55-13:15 |  Lecture Hall BAX
+Class A | Intro to Caltech | 07, President Rosenbaum | M,W,F | 11:55-13:15 |  Lecture Hall BAX
 Class A Recitation | Intro to Caltech! | | T | 15:00-16:00 | B270 MRE
 Class B | Intro to Math | 07, Professor Einstein | T,TR| 10:15-11:00 | 201 BRG
 
@@ -40,4 +40,4 @@ F | Friday
 
 6) Import the calendar CSV file from the project directory. The program exports a CSV file called "CaltechCalOutput.csv". This CSV file contains the events to import into your Google Calendar. The instructions to import a CSV file into Google Calendar [can be found here](https://support.google.com/calendar/answer/37118?hl=en&co=GENIE.Platform%3DDesktop).
 
-**I recommend creating a new calendar to import the birthdays. This way, if there is any issue with the program, you can simply delete the bad calendar, rather than having to sift through your main calendar. Instructions to create a new calendar [can be found here](https://support.google.com/calendar/answer/37095?hl=en)**.
+**I recommend creating a new calendar to import your classes. This way, if there is any issue with the program, you can simply delete the bad calendar, rather than having to sift through your main calendar. Instructions to create a new calendar [can be found here](https://support.google.com/calendar/answer/37095?hl=en)**.
