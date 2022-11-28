@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://access.caltech.edu/pls/regis/f?p=2000:58:29924795353541::NO::: -->
+<html class=" js flexboxlegacy no-touch" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="x-ua-compatible" content="IE=edge">
+
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->  <!--<![endif]-->
+
+    
+  <title>Course Enrollment</title>
+  <link rel="stylesheet" href="./Course Enrollment_files/Core.min.css" type="text/css">
+<link rel="stylesheet" href="./Course Enrollment_files/Theme-Standard.min.css" type="text/css">
+<link rel="stylesheet" href="./Course Enrollment_files/jquery-ui-apex.min.css" type="text/css">
+
+  <link rel="stylesheet" href="./Course Enrollment_files/font-apex.min.css" type="text/css">
+<link rel="stylesheet" href="./Course Enrollment_files/Core.min(1).css" type="text/css">
+
+  
+  <link rel="stylesheet" href="./Course Enrollment_files/66237223019394473.css" type="text/css">
+
+  
+  <style type="text/css">
+@media (max-width: 480px) {
+  .welcomeMessage {top:0;}
+
+  .t-Header-logo-link {
+    margin-top: 1.8rem;
+  }
+}
+a {
+    text-decoration: none;
+}
+</style>
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="https://access.caltech.edu/pls/regis/cit_shadow_ws/r/2000/files/static/v12Y/favicon.ico">
+  <script type="text/javascript">
+
+function reloadPage()
+{
+    doSubmit('POPULATE');
+}
+
+    
+function dropClass(seqVal,coreVal) 
+{
+  document.getElementById('P58_DROP_SEQ').value = seqVal;    
+  document.getElementById('P58_CORE_COURSE').value = coreVal;    
+  if ( coreVal == 'Y')  
+      {
+          alert(document.getElementById('P58_DROP_WARNING').value);  
+      }
+  else
+      {
+          doSubmit('DROP');
+      }
+
+}    
+       
+function popitup(seqVal,offerId) 
+{
+   document.getElementById('P58_SEQ').value = seqVal;
+   document.getElementById('P58_OFFERING_ID').value = offerId;
+   document.getElementById('P58_COURSE_FLAG2').value = 'Y';
+   openModal('EDIT_COURSE2');
+}
+    
+      function windowOpenLink(UrlValue) {
+             <!-- Get screen height and width and adjust popups accordingly using a base of 768 1024 -->
+             var screenHeight = screen.height;
+             var screenWidth = screen.width;
+             var heightAdjustmentFactor;
+             var widthAdjustmentFactor;
+             heightAdjustmentFactor = screenHeight/768;
+             widthAdjustmentFactor = screenWidth/1024;
+             popup = window.open(UrlValue,"","height=" + 600*heightAdjustmentFactor + ",width=" + 800*widthAdjustmentFactor + ",top=20,left=20,titlebar=yes,scrollbars=yes,resizable=yes,menubar=yes");
+		  }  
+
+
+</script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions apex-top-nav apex-icons-fontapex apex-theme-caltech-v3-copy t-PageBody--topNav js-HeaderExpanded" id="t_PageBody" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
+<form action="https://access.caltech.edu/pls/regis/wwv_flow.accept" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate="">
+<input type="hidden" name="p_flow_id" value="2000" id="pFlowId"><input type="hidden" name="p_flow_step_id" value="58" id="pFlowStepId"><input type="hidden" name="p_instance" value="29924795353541" id="pInstance"><input type="hidden" name="p_page_submission_id" value="297065379494723037996413820203543288267" id="pPageSubmissionId"><input type="hidden" name="p_request" value="" id="pRequest"><input type="hidden" name="p_reload_on_submit" value="A" id="pReloadOnSubmit"><input type="hidden" value="297065379494723037996413820203543288267" id="pSalt">
+<header class="t-Header" id="t_Header">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" id="t_Button_navControl" type="button"><span class="t-Icon fa-bars" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+      <a href="https://access.caltech.edu/pls/regis/f?p=2000:24.:29924795353541:::::" class="t-Header-logo-link"><span class="apex-logo-text"><img src="./Course Enrollment_files/Caltech-Logo.png">REGIS</span></a><span class="welcomeMessage"> Welcome <b>Schork, Bram Winter</b>. If this is not you, <a href="https://access.caltech.edu/cas/logout?close_opt=true" class="logout">click here</a></span><a></a>
+    </div>
+    <div class="t-Header-navBar">
+      <ul class="t-NavigationBar " id="81974308533355830"><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="https://access.caltech.edu/pls/regis/f?p=2000:24:29924795353541::NO:::" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">Home</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="javascript:popUp2(&#39;http://registrar.caltech.edu/help&#39;,1000,800)" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">Help</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="https://access.caltech.edu/cas/logout?close_opt=true" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">Logout All</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="https://access.caltech.edu/" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">Exit</span><span class="t-Button-badge"></span>
+  </a>
+</li></ul>
+    </div>
+  </div>
+  <div class="t-Header-nav">
+    <ul class="t-Tabs t-Tabs--large t-Tabs--pill"><li class="t-Tabs-item"><a href="https://access.caltech.edu/pls/regis/f?p=2000:56:29924795353541::NO:::" class="t-Tabs-link"><span class="t-Icon "></span><span class="t-Tabs-label">Academic Information</span></a></li><li class="t-Tabs-item is-active"><a href="https://access.caltech.edu/pls/regis/f?p=2000:58:29924795353541::NO:::" class="t-Tabs-link"><span class="t-Icon "></span><span class="t-Tabs-label">Course Enrollment</span></a></li><li class="t-Tabs-item"><a href="https://access.caltech.edu/pls/regis/f?p=2000:57:29924795353541::NO:::" class="t-Tabs-link"><span class="t-Icon "></span><span class="t-Tabs-label">Limited Seating Courses</span></a></li></ul>
+    
+  </div>
+</header>
+    <div class="t-Body">
+  
+  <div class="t-Body-main" style="margin-top: 0px;">
+      <div class="t-Body-title" id="t_Body_title" style="top: 83px;">
+        <div class="t-Region t-Region--noPadding t-Region--removeHeader t-Region--noBorder t-Region--hiddenOverflow t-Form--noPadding" id="0" role="group" aria-labelledby="0_heading">
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <h2 class="t-Region-title" id="0_heading">Global Variables</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <input type="hidden" id="P0_USER" name="P0_USER" value="BSCHORK"><input type="hidden" data-for="P0_USER" value="tNWYLa3FXlA0ZbTKxll1ewuhC-9Nx7MvvcL1_5R8dcl3VWH6n9k9FaBynkQWI4FHWBDJE5Pw8kcFsYz0OkVx6A"><input type="hidden" id="P0_DATABASE" name="P0_DATABASE" value="EXEPROD"><input type="hidden" data-for="P0_DATABASE" value="A3updCdFpRNZPx58p9aDceOuoDv4HuA6nREZQ00MN9PNfw-kh8RQnsTY-aOTePHrUMBkJV9c2HUUT-1PWRfVJw"><input type="hidden" id="P0_ROW_COUNT" name="P0_ROW_COUNT" value="999"><input type="hidden" data-for="P0_ROW_COUNT" value="o3DkfUc-JZrzLLnmpnjhh0QObipm-pMcdNNATHYIGQYZfhGR_jdd90U6aR8ik80wNn_S5lgWT5k0549TX6xipw"><input type="hidden" id="P0_IP_ADDRESS" name="P0_IP_ADDRESS" value="37.19.206.47"><input type="hidden" data-for="P0_IP_ADDRESS" value="D-dykdVDcgU5t3x7Cck8WGnZ7OaRb_Xkk3femkcDs_FVy4TBbIvoKm_dAQ7xtcKtoyfXwfqhgK4dxzHlFDlSAA"><input type="hidden" id="P0_PERSON_UID" name="P0_PERSON_UID" value="2205684"><input type="hidden" data-for="P0_PERSON_UID" value="YU4cYEpnLmx2ipn4DNGsuvK1TirANNabNiCl0n1sw_I3Nt-QIgVDqDO5AALiRtiy656gVH5GL28wwaJubitfdw"><input type="hidden" id="P0_PERSON_ID" name="P0_PERSON_ID" value="723252"><input type="hidden" data-for="P0_PERSON_ID" value="iqvXV5xDpMgPrI2nK5MDZcIyYnAAzPBJF5rZK9cKBqGW8vGVZF2OF3wqO5IShGkBitn5cG2EBow8qXLXbu_xEQ"><input type="hidden" id="P0_STUDENT_UID" name="P0_STUDENT_UID" value="2205684"><input type="hidden" data-for="P0_STUDENT_UID" value="M_I9Fdcs8_oUG--nNT_j2wxLyrOpfCwbhpINU5EwEFonPhQvOfEV9JYsgrL8rF7_-4NmLsmnVMXNXFQIFDZq9g"><input type="hidden" id="P0_HOLD_STUDENT_UID" name="P0_HOLD_STUDENT_UID" value="2205684"><input type="hidden" data-for="P0_HOLD_STUDENT_UID" value="Zxcx-zI7L0isth9JjDkQXaK147_TaSpwyLi-VNiEhcQKpMo4PDNdwIuTtuvZYuzZSXlPZMSV3228TFeiJP3XfA"><input type="hidden" id="P0_DEGREE" name="P0_DEGREE" value=""><input type="hidden" data-for="P0_DEGREE" value="oRmrvCJz9nS4cNmi3-F0A0x2Coq3O5egy3vNHWaKj893BgnGJFwJnnbRyWiI6_45hNoAy2OyJKVQpkrTKHNzLQ"><input type="hidden" id="P0_MAJOR" name="P0_MAJOR" value=""><input type="hidden" data-for="P0_MAJOR" value="ytvMUQUxQNjOmBTjuQEekX7--XRcNKpX5Cxz3g_Hku-ZUSxT_FUETXD2erzbPES9wioinHixUWTbo7TTLuAvqQ"><input type="hidden" id="P0_KEEP_ACTIVE" name="P0_KEEP_ACTIVE" value="0"><input type="hidden" data-for="P0_KEEP_ACTIVE" value="uvHJhWWcsGjJHE9-yioUjqzwpA_ReJoYYsB2gVpWoGctfUfTTk3yjkeaqbEfcCv3kPbFpAqvspKMR0llgNcWAw"><input type="hidden" id="P0_STUDENT_NAME" name="P0_STUDENT_NAME" value=""><input type="hidden" id="P0_PERSON_NAME" name="P0_PERSON_NAME" value="Schork, Bram Winter"><input type="hidden" data-for="P0_PERSON_NAME" value="nPWDF8KrlabvtK6Eg04sBY5EYO-MwKebj3yn-XJWwNMdARLsF_RkrZnd4oRiBBcJK0nydeuuGzlf5vQmQcPdNg"><input type="hidden" id="P0_USER_NAME" name="P0_USER_NAME" value="BSCHORK"><input type="hidden" data-for="P0_USER_NAME" value="5_yOBU3gDLfLNmYjSqEoHaeWBY8QyXqV28jzKAiR-yLnDztRTAz0lLgL5AaygttBCNLcqxOeUybo3_I5mEAdeA"><input type="hidden" id="P0_USER_ID" name="P0_USER_ID" value="0"><input type="hidden" data-for="P0_USER_ID" value="FtOWdCX7jOG-NfbkDalOGLgm_j0pMpDbK5l_R0f-3Dght8_GwYHIQVAPCOygXyTUl5sRNzBP6iYGIPwb46stmA"><input type="hidden" id="P0_ROLE" name="P0_ROLE" value="0"><input type="hidden" data-for="P0_ROLE" value="-IOGpQ8ySZqV5fpXv1ZDLX5IRldqsNlchhIHqk04FfFwJSTlQLDVcbI_3qyFp50nyt51WH-UHJhzSdLPv4qjHw"><input type="hidden" id="P0_STUDENT_ID" name="P0_STUDENT_ID" value="723252"><input type="hidden" data-for="P0_STUDENT_ID" value="K-0uSTdysJTpUQFxiZRevqvi5DYs9dIxh2yuoGGTubze0VfvSn1YWBww-h74pwDYp9DmWc0tmU6N2FK-IKeB2g"><input type="hidden" id="P0_DEFAULT_PAGE" name="P0_DEFAULT_PAGE" value="1"><input type="hidden" data-for="P0_DEFAULT_PAGE" value="FayEBSH4SY2b0j7wpFMny7DW6Or88dNENui7R2z178G9DLgHDMRs4RZjWKcKRGPcf2S1fuOHHG0G5sLcHWb6OQ"><input type="hidden" id="P0_CLEAR_CACHE" name="P0_CLEAR_CACHE" value=""><input type="hidden" id="P0__PAGE_TYPE" name="P0__PAGE_TYPE" value=""><input type="hidden" data-for="P0__PAGE_TYPE" value="GMRqRBp8XvmEPuKxyrh36sDivqew0_oK76rI2DLEBsxA69ILHNnkAn3PCsyAoz7mmDxmM2cRLt42nCTUox_jew"><input type="hidden" id="P0_LAST_ACTIVITY" name="P0_LAST_ACTIVITY" value="1669594837109"><input type="hidden" id="P0_DUMMY" name="P0_DUMMY" value="0"><input type="hidden" id="P0_INSTANCE_NAME" name="P0_INSTANCE_NAME" value="">
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+
+      </div>
+      <div class="t-Body-content" id="t_Body_content" style="margin-top: 92px;">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="81287479871994072_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="81287479871994072_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-contentInner">
+          <div class="container">
+<div class="row">
+<div class="col col-12 apex-col-auto">
+<div class="t-Region t-Region--scrollBody" id="R82595220665896897" role="group" aria-labelledby="R82595220665896897_heading">
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <h2 class="t-Region-title" id="R82595220665896897_heading">Student Schedule</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <input type="hidden" id="P58_UID" name="P58_UID" value="2205684"><input type="hidden" data-for="P58_UID" value="OiWQitktUODcYa1F4eM235EpWL_qD9AKZerXCQsctws_Zgdg0gYyqAWD48r758ld7pk75GZt5WwFFJw8vPDkyA"><input type="hidden" id="P58_ACAD_TERM_ID" name="P58_ACAD_TERM_ID" value="551"><input type="hidden" data-for="P58_ACAD_TERM_ID" value="maMsopbeuf0DGAJvHN4mu9Wr4TWcxCCB109mDz7P4W85Kh5xc13HPDYp2ID46Ze0xVdheqwXYrrB3o2CKKRLEw"><div class="container">
+<div class="row">
+<div class="col col-12 apex-col-auto">
+<div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--display-only " id="P58_ERROR_CONTAINER"><div class="t-Form-labelContainer col col-3">
+<label for="P58_ERROR" id="P58_ERROR_LABEL" class="t-Form-label"></label>
+</div>
+<div class="t-Form-inputContainer col col-9"><span id="P58_ERROR" class="display_only apex-item-display-only"></span><span id="P58_ERROR_error_placeholder" class="a-Form-error" data-template-id="81355529125994115_ET"></span></div></div>
+</div>
+</div><div class="row">
+<div class="col col-12 apex-col-auto">
+<div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--display-only " id="P58_STUDENT_SCHEDULE_CONTAINER"><div class="t-Form-labelContainer col col-3">
+<label for="P58_STUDENT_SCHEDULE" id="P58_STUDENT_SCHEDULE_LABEL" class="t-Form-label"> Student Schedule for Academic Term: </label>
+</div>
+<div class="t-Form-inputContainer col col-9"><span id="P58_STUDENT_SCHEDULE" class="display_only apex-item-display-only">WI 2022-23</span><span id="P58_STUDENT_SCHEDULE_error_placeholder" class="a-Form-error" data-template-id="81355529125994115_ET"></span></div></div>
+</div>
+</div><div class="row">
+<div class="col col-12 apex-col-auto" style="margin-bottom:20px;">
+<div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--display-only " id="P58_SCHEDULE_STATUS_CONTAINER"><div class="t-Form-labelContainer col col-3">
+<label for="P58_SCHEDULE_STATUS" id="P58_SCHEDULE_STATUS_LABEL" class="t-Form-label">Schedule Status:</label>
+</div>
+<div class="t-Form-inputContainer col col-9"><span id="P58_SCHEDULE_STATUS" class="display_only apex-item-display-only">Pending Approval</span><span id="P58_SCHEDULE_STATUS_error_placeholder" class="a-Form-error" data-template-id="81355529125994115_ET"></span></div></div><input type="hidden" id="P58_COURSE_EDITABLE_FLAG" name="P58_COURSE_EDITABLE_FLAG" value="0"><input type="hidden" id="P58_COURSE_FLAG" name="P58_COURSE_FLAG" value="N"><input type="hidden" data-for="P58_COURSE_FLAG" value="JB8Ky91FIDJ2DVclFSS22g_adFLV2vV99q-5vJJurfX0DjEN-yig5NTOpr60zcf5dxbfedaBkegkANnaKQFvgg"><input type="hidden" id="P58_COURSE_FLAG2" name="P58_COURSE_FLAG2" value="N"><input type="hidden" data-for="P58_COURSE_FLAG2" value="1rhoObuKBvas8DbWxj456OoVq6FP3PLlrCfFz-Lvoi-tgTViiClW6gfYCoQD6p_OVtZE090h0KQjNUVBaSNHvw"><input type="hidden" id="P58_PRINT_SCHEDULE_URL" name="P58_PRINT_SCHEDULE_URL" value="f?p=2000:61:29924795353541::NO::P61_TERM_ID:&amp;cs=3RU10RtBKfVHz9u8tVKBVPDDMMW7D1XqCi0XwPMDLLo1K75-sknVyVL9N4PfNJJSTYdGhTu0UWCHL81Men6faPg"><input type="hidden" data-for="P58_PRINT_SCHEDULE_URL" value="zXHkmWK8GSPXasl4IgkU6LgqmW0rr_5MVYJrqtkyYHZuul7Q5EJBa8UwV9L3gepXlj0FZopsnh7UgNP93C2cGQ"><input type="hidden" id="P58_PRINT_CALENDAR_URL" name="P58_PRINT_CALENDAR_URL" value="f?p=2000:62:29924795353541::NO::P62_UID,P62_TERM_ID,P62_TYPE:7344F57DE573E953201CC49C2728F715,551,CALENDAR&amp;cs=3r0W8LWReqgJdm14eNoEzHYp7FiFo9fNtnls2zzNVXTHHY-WMJNNz333VXPRtZ1duzAAANr25uS2e8-7t9E1c2g"><input type="hidden" data-for="P58_PRINT_CALENDAR_URL" value="KVvUHn4KrJzeIY1uDNKz2HtExyncMw0nmngyVnlKWGy4vApdlmZB7Z0RGbi3M7JU48C_rRho9bqqLrfm9RXKrg"><input type="hidden" id="P58_SUBMIT_WARNING_URL" name="P58_SUBMIT_WARNING_URL" value="javascript:apex.navigation.dialog(&#39;f?p=2000:51:29924795353541::NO\u0026p_dialog_cs=twUzb__41jxLhrc1a8e4KwjIfTS9srbcuzDcbRE9rp3Mn4Qsm1Pfr_2-UfZCVLRvo21hImm-cYo9eBu5AhoBUA&#39;,{title:&#39;Acknowledge&#39;,height:&#39;500&#39;,width:&#39;720&#39;,maxWidth:&#39;960&#39;,modal:true,dialog:null},&#39;t-Dialog--standard&#39;,apex.jQuery(&#39;#SUBMIT_WARNING&#39;));"><input type="hidden" data-for="P58_SUBMIT_WARNING_URL" value="i2YnIUVBLXq84uCeYGTmmAPiMc24eB2xMV63PHDYcas_5FttdESzs5OO6xmzYullUMcil-at3ngKxA6GekiSNQ"><input type="hidden" id="P58_SUBMIT_MODAL_FLAG" name="P58_SUBMIT_MODAL_FLAG" value="N"><input type="hidden" id="P58_DROP_SEQ" name="P58_DROP_SEQ" value=""><input type="hidden" id="P58_SESSION_ID" name="P58_SESSION_ID" value="E5B33B40C963ACE60FAB4BA6374EBCC6"><input type="hidden" data-for="P58_SESSION_ID" value="Meqdbi4l_xyGArqRShnGrmEmKDeNseXj5ok0ZIAqpx9av1DvYzx4D2HvWgDZHjEGEUE15giVN5Q05hWuR02s5A"><input type="hidden" id="P58_CORE_COURSE" name="P58_CORE_COURSE" value=""><input type="hidden" id="P58_DROP_WARNING" name="P58_DROP_WARNING" value=""><input type="hidden" data-for="P58_DROP_WARNING" value="szhcSxhAUPMuOlVq2F6dr43ggKw0DZYpz_K6meom_ND3Tfj0wYrtXNf7RoxV9FlQ0cmjnKcHJaV7XTZDVMrMYA"><input type="hidden" id="P58_DML_COURSE_SUCCESS" name="P58_DML_COURSE_SUCCESS" value=""><input type="hidden" data-for="P58_DML_COURSE_SUCCESS" value="-Suo2Ay5LTlBQfzRjXL16xRQGnrK8K0wPZWOBaO8lj9lgNhrurss8M8jJufJQrSSVd6ufzpYbg4iOy6YrxdhOw"><input type="hidden" id="P58_DML_COURSE_FAIL" name="P58_DML_COURSE_FAIL" value=""><input type="hidden" data-for="P58_DML_COURSE_FAIL" value="EewgoaqaDgM1gTWlGWJmupbBaNHfpEzyjW6rxMrROlI3-iG7CBOishP4bLOW5OtfXqLkPCC7il-b03Fpiwxaxw"><input type="hidden" id="P58_DML_RECALL_FAIL" name="P58_DML_RECALL_FAIL" value=""><input type="hidden" data-for="P58_DML_RECALL_FAIL" value="Y8INCHgqEsSF7Cm15pb-pFj972Q1jLHF7_uWnvbOSTlpbjJBFA5x8dhT38UQv1cmmn7YJ0jkXMMfui4LC9V61A"><input type="hidden" id="P58_SUCCESS" name="P58_SUCCESS" value=""><input type="hidden" data-for="P58_SUCCESS" value="mavEG1kTz-Wv11lE9MgCaNa1NbLDfbjFpeSKAGCyGdTmons8jrXO2VTtHQfojYLUhpIdjL_Q8QLQBg96bBZgRA"><input type="hidden" id="P58_PROGRAM" name="P58_PROGRAM" value="Undergraduate"><input type="hidden" data-for="P58_PROGRAM" value="yyhodCPtCIzl9f_gR0pohGCZm-kLGL-cECPLr6vRlYT873hP7j4sr58gsgx_kjkT3oUqXhlr9E5GVLLTmRi6HQ">
+</div>
+</div>
+</div>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+
+</div>
+</div><div class="row">
+<div class="col col-12 apex-col-auto">
+<div class="t-Region t-Region--scrollBody" id="CourseEnrollment" role="group" aria-labelledby="CourseEnrollment_heading" aria-live="polite">
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <h2 class="t-Region-title" id="CourseEnrollment_heading">Course Enrollment</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <input type="hidden" id="P58_COURSE_LEGEND" name="P58_COURSE_LEGEND" value="Remember to discuss this schedule with your adviser."><input type="hidden" id="P58_UNDERLOAD_LIMIT" name="P58_UNDERLOAD_LIMIT" value="N"><input type="hidden" data-for="P58_UNDERLOAD_LIMIT" value="nP2_nUiPZiqjW6c427zPwOkCH2ZgRltsbq0nRY76el6Vhw4Bqfrv3j3N3xV9mJdBZd0ymescKRcBaSnLR5WmXA"><input type="hidden" id="P58_SUBMIT_ADVISER" name="P58_SUBMIT_ADVISER" value="N"><input type="hidden" id="P58_SUBMIT_ADVISER_FLAG" name="P58_SUBMIT_ADVISER_FLAG" value="N"><input type="hidden" data-for="P58_SUBMIT_ADVISER_FLAG" value="K1Jun_7_GURynzQe2tw10xx6Fg_zk_pU-mdUKZKvTuGkDdW0FrVPxjSz4TbgVdw8BdJKSPftIHq2z7B153DXqg"><input type="hidden" id="P58_RECALL_SCHEDULE_FLAG" name="P58_RECALL_SCHEDULE_FLAG" value="Y"><input type="hidden" data-for="P58_RECALL_SCHEDULE_FLAG" value="aRVCrrmcXDSYGmirwJwQ6JA1lOuNPzqpChcj-DqVp0V_cHtAtTKiPUjjiu86V1G-5PJg5ufFH_d1AyFIzqO99Q"><div id="report_82503460196841765_catch"><div class="t-Report t-Report--altRowsDefault t-Report--rowHighlight" id="report_CourseEnrollment">
+  <div class="t-Report-wrap">
+    <table class="t-Report-pagination" role="presentation"><tbody><tr><td></td></tr></tbody></table>
+    <div class="t-Report-tableWrap">
+    <table class="t-Report-report" summary="Course Enrollment">
+<thead><tr><th class="t-Report-colHead" align="center" id="OFFERING_NAME">Offering Name</th><th class="t-Report-colHead" align="center" id="OFFERING_TITLE">Offering Title</th><th class="t-Report-colHead" align="center" id="SECTION_INSTRUCTOR">Section/Instructor</th><th class="t-Report-colHead" align="center" id="STATUS">Status</th><th class="t-Report-colHead" align="center" id="DAYS_AND_TIME">Days/Time</th><th class="t-Report-colHead" align="center" id="LOCATION">Location</th><th class="t-Report-colHead" align="center" id="GRADE_SCHEME">Grade Schemes</th><th class="t-Report-colHead" align="center" id="UNITS">Units</th></tr></thead>
+<tbody>
+<tr><td class="t-Report-cell" headers="OFFERING_NAME"><b>Ch 001B</b></td><td class="t-Report-cell" headers="OFFERING_TITLE">General Chemistry<br><small><i><b>Maximum Enrollment: 25 students per section</b></i></small></td><td class="t-Report-cell" headers="SECTION_INSTRUCTOR">01 Chan, G / Robb, M</td><td class="t-Report-cell" headers="STATUS">Enrolled</td><td class="t-Report-cell" headers="DAYS_AND_TIME">&nbsp;MTR 11:00-11:55<br>W 14:00-14:55</td><td class="t-Report-cell" headers="LOCATION">&nbsp;Lecture Hall BAX<br>B122 GCL<br></td><td class="t-Report-cell" headers="GRADE_SCHEME">Pass-Fail</td><td class="t-Report-cell" headers="UNITS">9</td></tr>
+<tr><td class="t-Report-cell" headers="OFFERING_NAME"><b>Hum/H 013</b></td><td class="t-Report-cell" headers="OFFERING_TITLE">Brave New Worlds: Race, Human Rights and the Age of Discovery<br><small><i><b>Attendance at the first class meeting is required. // maximum enrollment: 15 students</b></i></small></td><td class="t-Report-cell" headers="SECTION_INSTRUCTOR">01 Wey-Gomez, N</td><td class="t-Report-cell" headers="STATUS">Enrolled</td><td class="t-Report-cell" headers="DAYS_AND_TIME">&nbsp;TR 09:00-10:25</td><td class="t-Report-cell" headers="LOCATION">&nbsp;A<br></td><td class="t-Report-cell" headers="GRADE_SCHEME">Pass-Fail</td><td class="t-Report-cell" headers="UNITS">9</td></tr>
+<tr><td class="t-Report-cell" headers="OFFERING_NAME"><b>Ma 001B</b></td><td class="t-Report-cell" headers="OFFERING_TITLE">Calculus of One and Several Variables and Linear Algebra<br><small><i><b>Sections 1-5 Practical Track -- Sections 6-9 Analytical Track // maximum enrollment: 45 students per section</b></i></small></td><td class="t-Report-cell" headers="SECTION_INSTRUCTOR">03 Mantovan, E</td><td class="t-Report-cell" headers="STATUS">Enrolled</td><td class="t-Report-cell" headers="DAYS_AND_TIME">&nbsp;MWF 10:00-10:55<br>R 13:00-13:55</td><td class="t-Report-cell" headers="LOCATION">&nbsp;119 KRK<br>A<br></td><td class="t-Report-cell" headers="GRADE_SCHEME">Pass-Fail</td><td class="t-Report-cell" headers="UNITS">9</td></tr>
+<tr><td class="t-Report-cell" headers="OFFERING_NAME"><b>Ph 001B</b></td><td class="t-Report-cell" headers="OFFERING_TITLE">Classical Mechanics and Electromagnetism<br><small><i><b>Practical Track- Sections 1-5 // Analytical Track - Sections 6-10//Maximum Enrollment: 35 students per section</b></i></small></td><td class="t-Report-cell" headers="SECTION_INSTRUCTOR">04 Refael, G</td><td class="t-Report-cell" headers="STATUS">Enrolled</td><td class="t-Report-cell" headers="DAYS_AND_TIME">&nbsp;WF 15:00-15:55<br>MR 15:00-15:55</td><td class="t-Report-cell" headers="LOCATION">&nbsp;201 BRG<br>102 STL<br></td><td class="t-Report-cell" headers="GRADE_SCHEME">Pass-Fail</td><td class="t-Report-cell" headers="UNITS">9</td></tr>
+<tr><td class="t-Report-cell" headers="OFFERING_NAME"><b>Ch 001B</b></td><td class="t-Report-cell" headers="OFFERING_TITLE">General Chemistry<br><small><i><b>Maximum Enrollment: 25 students per section</b></i></small></td><td class="t-Report-cell" headers="SECTION_INSTRUCTOR">01 Chan, G / Robb, M</td><td class="t-Report-cell" headers="STATUS">Dropped</td><td class="t-Report-cell" headers="DAYS_AND_TIME">&nbsp;MTR 11:00-11:55<br>W 14:00-14:55</td><td class="t-Report-cell" headers="LOCATION">&nbsp;Lecture Hall BAX<br>B122 GCL<br></td><td class="t-Report-cell" headers="GRADE_SCHEME">Pass-Fail</td><td class="t-Report-cell" headers="UNITS">-</td></tr>
+<tr><td class="t-Report-cell" headers="OFFERING_NAME"><b>&nbsp;</b></td><td class="t-Report-cell" headers="OFFERING_TITLE"><b>&nbsp;</b></td><td class="t-Report-cell" headers="SECTION_INSTRUCTOR"><b>&nbsp;</b></td><td class="t-Report-cell" headers="STATUS"><b>&nbsp;</b></td><td class="t-Report-cell" headers="DAYS_AND_TIME"><b>&nbsp;</b></td><td class="t-Report-cell" headers="LOCATION"><b>&nbsp;</b></td><td class="t-Report-cell" headers="GRADE_SCHEME"><b>&nbsp;</b></td><td class="t-Report-cell" headers="UNITS"><b>36</b></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="t-Report-links"></div>
+    <table class="t-Report-pagination t-Report-pagination--bottom" role="presentation"></table>
+  </div>
+</div></div><br><br>&nbsp;Remember to discuss this schedule with your adviser.<br><br>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+
+</div>
+</div><div class="row">
+<div class="col col-12 apex-col-auto">
+<div class="t-Region t-Region--removeHeader t-Region--noBorder t-Region--scrollBody" id="R82595063968896896" role="group" aria-labelledby="R82595063968896896_heading">
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <h2 class="t-Region-title" id="R82595063968896896_heading">Buttons</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td align="left"><button onclick="popUp2(document.getElementById(&#39;P58_PRINT_SCHEDULE_URL&#39;).value,1200,1000);" class="t-Button t-Button--gapRight" type="button" id="B82795674009051868"><span class="t-Button-label">Print Schedule</span></button><button onclick="popUp2(document.getElementById(&#39;P58_PRINT_CALENDAR_URL&#39;).value,1200,1000);" class="t-Button t-Button--gapRight" type="button" id="B82795994860051871"><span class="t-Button-label">Print Calendar</span></button><button onclick="apex.submit({request:&#39;RECALL_SCHEDULE&#39;});" class="t-Button t-Button--gapRight" type="button" id="B82796207560051873"><span class="t-Button-label">Recall Schedule</span></button></td></tr></tbody></table>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+
+</div>
+</div><div class="row">
+<div class="col col-12 apex-col-auto">
+<div class="t-Region t-Region--removeHeader t-Region--scrollBody" id="R82981083125304698" role="group" aria-labelledby="R82981083125304698_heading">
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <h2 class="t-Region-title" id="R82981083125304698_heading">Comments</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div class="container">
+<div class="row">
+<div class="col col-12 apex-col-auto" style="margin-top:15px;">
+Your adviser's comments:&nbsp;<b><input type="hidden" name="P58_ADVISER_COMMENTS" id="P58_ADVISER_COMMENTS" value=""><input type="hidden" data-for="P58_ADVISER_COMMENTS" value="sm4blY7f2ow2Hj2PD_V0u--hD_A2_c80b9gKx9sfOmYW-yboq3bxurWKtL1c7g1PdKI3vJ5SaZQJ78vkUi4u-w"><span id="P58_ADVISER_COMMENTS_DISPLAY" class="display_only apex-item-display-only"></span></b><br><br>
+</div>
+</div><div class="row">
+<div class="col col-12 apex-col-auto" ;="">
+<span id="P58_COMMENT_LABEL" class="display_only apex-item-display-only">Comments sent to your adviser with your last submit for approval: </span>
+</div>
+</div><div class="row">
+<div class="col col-12 apex-col-auto">
+<div class="apex-item-group apex-item-group--textarea" role="group" aria-labelledby="P58_COMMENTS_LABEL" tabindex="-1"><textarea name="P58_COMMENTS" rows="5" cols="90" wrap="virtual" id="P58_COMMENTS" class="textarea apex-item-textarea apex_disabled" style="resize: both; color: rgb(0, 0, 0);"></textarea><div id="P58_COMMENTS_CHAR_COUNT" style="display: none; color: rgb(0, 0, 0);" class="apex-item-textarea-counter"><span id="P58_COMMENTS_CHAR_COUNTER" class="apex-item-textarea-counter--length">0</span> of <span class="apex-item-textarea-counter--size">4000</span></div></div>
+</div>
+</div>
+</div>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+
+</div>
+</div><div class="row">
+<div class="col col-12 apex-col-auto">
+<div id="R82962130428896385" class=""> 
+<div class="container">
+<div class="row">
+<div class="col col-12 apex-col-auto">
+<div class="t-Form-fieldContainer t-Form-fieldContainer--hiddenLabel rel-col  apex-item-wrapper apex-item-wrapper--display-only " id="P58_COURSE_ENROLLMENT_LINKS_CONTAINER"><div class="t-Form-labelContainer t-Form-labelContainer--hiddenLabel col col-3">
+<label for="P58_COURSE_ENROLLMENT_LINKS" id="P58_COURSE_ENROLLMENT_LINKS_LABEL" class="t-Form-label u-VisuallyHidden">Course enrollment links</label>
+</div><div class="t-Form-inputContainer col col-9"><a href="javascript:windowOpenLink(&#39;http://catalog.caltech.edu/current/courses&#39;);">Course Descriptions in Caltech Catalog &nbsp; | &nbsp; </a> 
+<a href="javascript:windowOpenLink(document.getElementById(&#39;P58_COURSE_SCHEDULE_URL&#39;).value);">Online Course Schedule &nbsp;  | &nbsp;  </a>
+<a href="javascript:windowOpenLink(&#39;http://pr.caltech.edu/catalog/&#39;);">Institute Requirements  &nbsp; | &nbsp; </a>
+<a href="javascript:windowOpenLink(&#39;http://registrar.caltech.edu/uash&#39;);">UASH Forms</a>
+<input type="hidden" name="P58_COURSE_ENROLLMENT_LINKS" id="P58_COURSE_ENROLLMENT_LINKS" value=""><input type="hidden" data-for="P58_COURSE_ENROLLMENT_LINKS" value="RhbAImCD4GnQt4NeLEd3rtaVai1ntmctqMN5fwGiNviy7HyEIK65DbtpZzCjYjzX5L-TfHExwkgQ8cVlFIDxTw"><span id="P58_COURSE_ENROLLMENT_LINKS_DISPLAY" class="display_only apex-item-display-only"></span><span id="P58_COURSE_ENROLLMENT_LINKS_error_placeholder" class="a-Form-error" data-template-id="81355398065994114_ET"></span></div></div>
+</div>
+</div><input type="hidden" id="P58_COURSE_SCHEDULE_URL" name="P58_COURSE_SCHEDULE_URL" value="http://schedules.caltech.edu/WI2022-23.html"><input type="hidden" data-for="P58_COURSE_SCHEDULE_URL" value="XTUrnXx_UDJSQah2T676Gd99FBntoNm3tV2Aa0gi35vAZjso7duKGhmf-FYxO5L7rwzKHh0R5mKYsehIZuP5iA">
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+        <footer class="t-Footer" style="position: absolute;">
+           
+          
+          <a href="https://access.caltech.edu/pls/regis/f?p=2000:58:29924795353541:SET_SESSION_SCREEN_READER_ON::::"> </a>
+          <div class="container">
+<div class="row">
+<div class="col col-12 apex-col-auto">
+<div id="R82963004189896394" class="t-Form--slimPadding"> 
+<div class="width-1440-container">
+<div class="footer d-flex flex-column flex-wrap flex-sm-row justify-content-sm-between">              
+<div class="footer__left">      
+<img class="footer__left__caltech-wordmark" alt="Caltech Logo" src="./Course Enrollment_files/caltech-new-logo.png"><div class="footer__left__caltech-title">California Institute of Technology</div>
+</div>    
+<div class="footer__right">      
+<div class="footer__right__contact-info-row">1200 East California Boulevard</div>      
+<div class="footer__right__contact-info-row">Pasadena, California 91125</div>    
+</div>    
+<nav class="footer__menu w-100 d-flex flex-wrap justify-content-center">      
+<a class="footer__menu__link" href="http://www.imss.caltech.edu/">Information Management Systems and Services</a>      
+<a class="footer__menu__link" href="http://hr.caltech.edu/documents/44-citpolicy_einfo.pdf">Terms of Use</a>          
+</nav>  
+</div>  
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+        </footer>
+      <a href="https://access.caltech.edu/pls/regis/f?p=2000:58:29924795353541::NO:::#" class="t-Body-topButton" style="display: block;"><span class=" a-Icon icon-up-chevron"></span></a></div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs">
+  
+</div><input type="hidden" id="pPageFormRegionChecksums" value="[]">
+<input type="hidden" id="pPageItemsRowVersion" value=""><input type="hidden" id="pPageItemsProtected" value="BdSOWrQIcbwJ2iHOtZMaG5GXnOTp6l63M8kdvmbU8okrIW3uT5Gmx5VsgUlWN254ARkxtLmHdd7yA61JjRaTcDyxKp93timbbvmhKVCkcZ2DqfuW191PLGaShyUh3ghu8jtbpk6D6HkfMF3IroDpqQeoeBb-Bv7r9yGQHvjCRrWnvKC4ttyibPqtNPwrDMWG6eAvx7brnbrurSGxz2PDym9i7T5YGIRnhfc_u-WhdBvYX2QUEj9cB-Cfx-K9TcQAX5N8U3v8NTvgW-f-laS7NMks73qsaF9nwa_86XCuLuUh_I7Hm9IlUuyl-7TuoyEhHkzQGA7SKuncEJdkMIm-0rygb3Rcy2h4DhmwJDXNLtqYn6wuRhRZwHGcQO1-9QqNzn_jjZ8l4cs-e-tkD9bEf8GiYfMeDvGXalZoidPyZAyy0ZaEDZy7WZAeM1AwawkwrwRjwVvOqEibcnklxJ30Ooy2vVY8kJ3KLcUYHUBKkfUz790VXOrpBqQqLDTmE2SJaLUfcOpH9V5lb6JnvsD7R507U1EgovLNB33bdZL3idagNNzplW07W6LfFhiq05tZg9preXrO53Jr268en-P-lC10c43gQLxMjVbaacOsodwmQEiLk_Bw_AcGYU17muqFMjbtlT3c6NKRg-pGW2Ze1eDdNXaKLj9Z8eb3mnPqu17lAgg1gi6MoHlRKzF0rRowPtvMps3HnjTTP3Z3dS-HPj6HyQCsJlhjMgN82I7yQjIORARr_hM3UyaARzibtFXNpfuuCQt8GNnU1VUvBYNDAedXX0t3quW7uATFoQPSrpdeu7qZbBH0JgTf98iBseoH"></form>
+
+
+<script>
+var apex_img_dir = "/19i/", htmldb_Img_Dir = apex_img_dir;
+</script>
+<script src="./Course Enrollment_files/desktop_all.min.js"></script>
+<script src="./Course Enrollment_files/wwv_flow.js_messages"></script>
+<script src="./Course Enrollment_files/legacy_pre18.min.js"></script>
+<script src="./Course Enrollment_files/legacy_18.min.js"></script>
+<script src="./Course Enrollment_files/jquery-migrate-3.0.1.min.js"></script>
+
+<script type="text/javascript">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"triggeringElementType":"ITEM","triggeringElement":"P58_TERM","bindType":"bind","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"DTv-sWYNNFu7DnL2ijC9zuLcIB5-wEYpLGr9eckRouA","attribute01":"#P58_TERM","attribute02":"#P58_TERM_ID","attribute04":"N","attribute05":"sync","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:apex.da.submitPage,"attribute01":"CHANGE_TERM","attribute02":"Y","action":"NATIVE_SUBMIT_PAGE"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P0_STUDENT_UID2","bindType":"bind","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"K6wVmjHa4Sc8WeXC7QVl3DfIrohrk2asUtvDO68lVVY","attribute01":"#P0_STUDENT_UID2","attribute02":"#P0_STUDENT_UID,#P0_STUDENT_UID2","attribute04":"Y","attribute05":"sync","action":"NATIVE_EXECUTE_PLSQL_CODE"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P58_TERM_ID","bindType":"bind","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"fOW8IaePdxSI-uVi9qphThpi1pCZ4x4GrPHD59cnqNE","attribute01":"#P58_TERM_ID","attribute02":"#P58_COURSE_LEGEND,#P58_SCHEDULE_STATUS,#P58_STUDENT_SCHEDULE","attribute04":"N","attribute05":"sync","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"CourseEnrollment",javascriptFunction:apex.da.refresh,"action":"NATIVE_REFRESH"}]},
+{"bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ $('footer').first().css('position', $(document).height() > $(window).height() ? "absolute" : "fixed");
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ setInterval(heartbeat, 5*60*1000); 
+extendTimeOut();
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"JQUERY_SELECTOR","triggeringElement":"textarea,input","conditionElement":"P0_DUMMY","triggeringConditionType":"NOT_EQUALS","triggeringExpression":"0","bindType":"bind","bindEventType":"keydown","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ extendTimeOut();
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"JQUERY_SELECTOR","triggeringElement":"*","conditionElement":"P0_DUMMY","bindType":"bind","bindEventType":"focusin","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ extendTimeOut();
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P58_DROP_SEQ","conditionElement":"P0_DUMMY","bindType":"bind","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"QmZIhzhXwnRQECgufIyIj8Z60IJz5BxeKJ7yV1nCUvw","attribute01":"#P58_DROP_SEQ","attribute02":"#P58_DROP_WARNING","attribute04":"N","attribute05":"sync","action":"NATIVE_EXECUTE_PLSQL_CODE"}]},
+{"triggeringElementType":"BUTTON","triggeringButtonId":"NEW_COURSE","conditionElement":"P0_DUMMY","bindType":"bind","bindEventType":"apexafterclosedialog","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:apex.da.submitPage,"attribute01":"ENTER_NEW_COURSE","attribute02":"Y","action":"NATIVE_SUBMIT_PAGE"}]},
+{"triggeringElementType":"JQUERY_SELECTOR","triggeringElement":"#CourseEnrollment","conditionElement":"P0_DUMMY","bindType":"bind","bindEventType":"apexafterclosedialog","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:apex.da.submitPage,"attribute02":"Y","action":"NATIVE_SUBMIT_PAGE"}]},
+{"triggeringElementType":"JQUERY_SELECTOR","triggeringElement":"#SUBMIT_WARNING","conditionElement":"P0_DUMMY","bindType":"bind","bindEventType":"apexafterclosedialog","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ doSubmit('BACK_TO_ACADEMIC_INFO');
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P58_RECALL_SCHEDULE_FLAG","triggeringConditionType":"JAVASCRIPT_EXPRESSION","triggeringExpression": function() {
+return ((document.getElementById('P58_RECALL_SCHEDULE_FLAG').value == 'Y' ||
+(document.getElementById('P58_RECALL_SCHEDULE_FLAG').value == 'N' &&
+document.getElementById('P58_SUBMIT_ADVISER').value == 'N' ))
+); },"bindType":"bind","bindEventType":"change","anyActionsFireOnInit":true,actionList:[{"eventResult":false,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P58_COMMENTS",javascriptFunction:apex.da.removeClass,"attribute01":"apex_disabled","action":"NATIVE_REMOVE_CLASS"},{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P58_COMMENTS",javascriptFunction:apex.da.addClass,"attribute01":"apex_disabled","action":"NATIVE_ADD_CLASS"},{"eventResult":false,"executeOnPageInit":true,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"sk12alz0LHfA3ONdriOd8hx7HfHDei96T_fb7D-8Sos","attribute02":"#P58_COMMENT_LABEL","attribute04":"N","attribute05":"sync","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"emE6zlKEIRzg1pmrgjP7oR8grW8EZM2yuVa4tUzYGsQ","attribute02":"#P58_COMMENT_LABEL","attribute04":"N","attribute05":"sync","action":"NATIVE_EXECUTE_PLSQL_CODE"}]},
+{"triggeringElementType":"BUTTON","triggeringButtonId":"SUBMIT_WARNING","bindType":"bind","bindEventType":"click","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"lOppG4a8yuajsTt2AsoASoLDApJm2vNELh5cwbQv_tk","attribute01":"#P58_COMMENTS,#P58_TERM_ID,#G_CURRENT_ENROLLMENT_TERM_ID,#G_TERM_OPTION_FLAG","attribute02":"#P58_SUBMIT_MODAL_FLAG","attribute04":"N","attribute05":"sync","action":"NATIVE_EXECUTE_PLSQL_CODE"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P58_SUBMIT_MODAL_FLAG","conditionElement":"P58_SUBMIT_MODAL_FLAG","triggeringConditionType":"EQUALS","triggeringExpression":"Y","bindType":"bind","bindEventType":"change","anyActionsFireOnInit":true,actionList:[{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,javascriptFunction:function (){ eval($('#P58_SUBMIT_WARNING_URL').val());
+},"action":"NATIVE_JAVASCRIPT_CODE"}]}];
+}
+</script>
+
+<script src="./Course Enrollment_files/widget.apexTabs.min.js"></script>
+<script src="./Course Enrollment_files/widget.stickyWidget.min.js"></script>
+<script src="./Course Enrollment_files/widget.stickyTableHeader.min.js"></script>
+<script src="./Course Enrollment_files/modernizr-custom.min.js"></script>
+<script src="./Course Enrollment_files/com.oracle.apex.carousel.min.js"></script>
+<script src="./Course Enrollment_files/theme42.min.js"></script>
+
+
+<script src="./Course Enrollment_files/HeartBeat.js"></script>
+
+  
+
+
+
+
+
+<script src="./Course Enrollment_files/widget.report.min.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+apex.jQuery( function() {
+apex.page.init( this, function() {
+apex.jQuery.when.apply( apex.jQuery, apex.page.loadingDeferreds ).done(function() {
+try {
+(function(){apex.widget.report.init("CourseEnrollment","C0e3mRuRKER9xt9sliWuQBdmkpr7r-_JteChgYlVg2Q",{"styleChecked":"#dddddd","internalRegionId":"82503460196841765"});})();
+(function(){apex.widget.textarea("P58_COMMENTS",{isResizable:true,hasCharCounter:true, maxChar: 4000});})();
+(function(){apex.da.initDaEventList();})();
+(function(){apex.da.init();})();
+apex.theme42.initializePage.noSideCol();
+
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+}
+});
+});
+});</script>
+
+
+
+<div id="pushModal" style="width: 100%; display:none; height: 100%;" class="u-DisplayNone u-Overlay--glass"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
