@@ -10,7 +10,7 @@
 - end_date --> last day of classes
 - days_off_raw --> Institute holidays when there are not classes
 
-Note, I try to keep the Github up to date with the current acaddemic year.* **Program is current for the 2022-23 Academic Year**
+Note, I try to keep the Github up to date with the current acaddemic year. **Program is current for the 2022-23 Academic Year**
 
 3) Environment setup. This program has been tested on both MacOS and Windows. Use the latest version of Python and install the required modules using `pip3 install -r requirements.txt`. You should use a `venv`. To create a virtual environment, you can use `python3 -m venv venv`. To activate your `venv` (on Windows), navigate to the project directory and run `.\venv\Scripts\activate`.
 
