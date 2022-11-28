@@ -1,4 +1,6 @@
 et-xmlfile==1.1.0
+HTMLParser==0.0.2
+lxml==4.9.1
 numpy==1.23.3
 openpyxl==3.0.10
 pandas==1.5.0
