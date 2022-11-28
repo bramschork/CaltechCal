@@ -2,11 +2,12 @@
 Author: Bram Schork
 Date: November 2022
 
-Version: 2.0.0
+Version: 2.0.1
 Academic Year: 2022-23
 
 Version Notes: 
- - No longer need to generate CSV file, the program can parse the HTML file from Caltech Access
+ - No longer need to generate CSV file, the program can parse the HTML file from Caltech Access.
+ - Asks for correct term to select term start and ends dates.
  
  ToDo:
   - Make file dialogue menu pop to top of other windows
@@ -46,10 +47,18 @@ while path == '':
     print('No file entered. Exiting.')
     sys.exit(-1)
 
+# Get term from user for start and end dates
+term = input('Select term:\nFall (0)\nWinter (1)\nSpring (2)\n------------\n')
+valid_inputs = ['0', '1', '2']
+
+while term not in valid_inputs:
+    term = input('Select term:\nFall (0)\nWinter (1)\nSpring (2)\n------------\n')
+
+term = int(term)
 
 # Turn date strings into datetime objects
-start_date = datetime.datetime.strptime(start_date, '%m-%d-%Y')
-end_date = datetime.datetime.strptime(end_date, '%m-%d-%Y')
+start_date = datetime.datetime.strptime(start_dates[term], '%m-%d-%Y')
+end_date = datetime.datetime.strptime(end_dates[term], '%m-%d-%Y')
 
 # Reformat days_off_raw
 days_off = []
