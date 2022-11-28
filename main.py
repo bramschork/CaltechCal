@@ -11,9 +11,7 @@ Version Notes:
  
  ToDo:
   - Make file dialogue menu pop to top of other windows
-  - Get current date and use that to figure out which start date to use
   - Check for null/nan values. Ex. for recitation
-  - Check access link
 '''
 
 # 2022-23 Academic Year Dates
