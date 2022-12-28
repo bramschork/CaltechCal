@@ -1,13 +1,13 @@
 '''
 Author: Bram Schork
-Date: November 2022
+Date: December 2022
 
-Version: 2.0.1
+Version: 2.0.2
 Academic Year: 2022-23
 
 Version Notes: 
- - No longer need to generate CSV file, the program can parse the HTML file from Caltech Access.
- - Asks for correct term to select term start and ends dates.
+ - Program ignores dropped classes from your Regis page download.
+- On Regis, T = Tuesday and R = Thursday. Program now reflects this.
  
  ToDo:
   - Make file dialogue menu pop to top of other windows
@@ -71,29 +71,22 @@ days_of_week = {
     'M': 'Monday',
     'T': 'Tuesday',
     'W': 'Wednesday',
-    'TR': 'Thursday',
+    'R': 'Thursday',
     'F': 'Friday'
 }
 
 
 def getDOW(vals):  
     '''
-    getDOW takes in a takes of values and converts their abbreviations to their full names. Ex. TR --> Tuesday.
+    getDOW takes in a takes of values and converts their abbreviations to their full names.
     It does this using the days_of_week dictionary.
     The function returns a list contians the full names in the same order as they came in.
     '''  
+    
     i = 0
     DOW = []
-    while i < len(vals):
-        if vals[i] != 'T' and vals[i] != 'R':
-            DOW.append(vals[i])
-        else:
-            if vals[i] == 'R':
-                pass
-            elif vals[i + 1] == 'R':
-                DOW.append('TR')
-            else:
-                DOW.append('T')
+    while i < len(vals): 
+        DOW.append(vals[i])
         i += 1
     return DOW
 
@@ -127,6 +120,7 @@ for index, row in df.iterrows():
     abbreviated_names = []
     class_times = []
     all_class_days = []
+    status = row['Status']
     
     i = 0
     while i < len(line):        
@@ -149,7 +143,7 @@ for index, row in df.iterrows():
         if dow != 'Saturday' and dow != 'Sunday' and check_date not in days_off:
             
             # if the check date is a day I have class, create an event
-            if dow in class_days[-1]:
+            if dow in class_days[-1] and status == 'Enrolled':
                 # Add event title
                 course_names.append(row['Offering Name'])
                 
