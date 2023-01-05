@@ -2,7 +2,7 @@
 Author: Bram Schork
 Date: January 2023
 
-Version: 2.1.0
+Version: 2.1.1
 Academic Year: 2022-23
 
 Version Notes: 
@@ -151,8 +151,13 @@ for index, row in df.iterrows():
             class_days.append([days_of_week[day], item[1]])
             
     if len(abbreviated_names) > 1:
-        recitation_days.append(days_of_week[abbreviated_names[1][0][0]])        
-    
+        abbreviated_recitation_days = abbreviated_names[1][0]
+        if len(abbreviated_recitation_days) == 1:
+            recitation_days.append(days_of_week[abbreviated_names[1][0][0]])
+        else:
+            for item in abbreviated_recitation_days:
+                recitation_days.append(days_of_week[item])
+                    
     # make all class days final item of list
     class_days.append(all_class_days)
 
