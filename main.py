@@ -196,7 +196,10 @@ for index, row in df.iterrows():
                     # Add event title
                     course_names.append('[Recitation] ' + row['Offering Name'])
                     locations.append(placeholder[1])
-                else:
+                elif type(placeholder) != list:
+                    course_names.append(row['Offering Name'])
+                    locations.append(placeholder)
+                else:    
                     # Add event title
                     course_names.append(row['Offering Name'])
                     locations.append(placeholder[0])
