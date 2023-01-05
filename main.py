@@ -6,8 +6,8 @@ Version: 2.0.2
 Academic Year: 2022-23
 
 Version Notes: 
- - Program ignores dropped classes from your Regis page download.
-- On Regis, T = Tuesday and R = Thursday. Program now reflects this.
+ - Program optionally creates file to make manual schedule edits (to change room location)
+ - Program now labels recitation and differentiates the location for lecture and recitation
  
  ToDo:
   - Make file dialogue menu pop to top of other windows
