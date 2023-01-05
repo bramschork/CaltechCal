@@ -47,9 +47,8 @@ while path == '':
 
 # Get term from user for start and end dates
 term = input('Select term:\nFall (0)\nWinter (1)\nSpring (2)\n------------\n')
-valid_inputs = ['0', '1', '2']
 
-while term not in valid_inputs:
+while term not in ['0', '1', '2']:
     term = input('Select term:\nFall (0)\nWinter (1)\nSpring (2)\n------------\n')
 
 term = int(term)
