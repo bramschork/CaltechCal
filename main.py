@@ -1,8 +1,8 @@
 '''
 Author: Bram Schork
-Date: December 2022
+Date: January 2023
 
-Version: 2.0.2
+Version: 2.1.0
 Academic Year: 2022-23
 
 Version Notes: 
@@ -53,6 +53,10 @@ while term not in valid_inputs:
     term = input('Select term:\nFall (0)\nWinter (1)\nSpring (2)\n------------\n')
 
 term = int(term)
+
+manual_edit = ''
+while manual_edit not in ['y', 'n']:
+    manual_edit = input('Would you like to create a class file to make manual changes(adjust class location, drop class, etc.)?\nType y or n:\n')
 
 # Turn date strings into datetime objects
 start_date = datetime.datetime.strptime(start_dates[term], '%m-%d-%Y')
@@ -107,6 +111,17 @@ table = pd.read_html(path)
 # Reformat the Pandas dataframe from 1 list to a normal Pandas dataframe
 df = table[0].dropna(axis=0, thresh=4)
 
+if manual_edit == 'y':
+    df.to_csv('MANUAL_EDIT.csv', index=False)
+    input('Press enter when done making changes. REMEMBER to close the manual edits file.')
+    df = pd.read_csv('MANUAL_EDIT.csv')
+    try:
+        os.remove('MANUAL_EDIT.csv')
+    except PermissionError:
+        print('ERROR. Please close MANUAL_EDIT.csv and try again.')
+        exit(1)
+    
+
 
 for index, row in df.iterrows():
     
@@ -121,6 +136,7 @@ for index, row in df.iterrows():
     class_times = []
     all_class_days = []
     status = row['Status']
+    recitation_days = []
     
     i = 0
     while i < len(line):        
@@ -133,6 +149,10 @@ for index, row in df.iterrows():
         for day in item[0]:
             all_class_days.append(days_of_week[day])
             class_days.append([days_of_week[day], item[1]])
+            
+    if len(abbreviated_names) > 1:
+        recitation_days.append(days_of_week[abbreviated_names[1][0][0]])        
+    
     # make all class days final item of list
     class_days.append(all_class_days)
 
@@ -143,10 +163,7 @@ for index, row in df.iterrows():
         if dow != 'Saturday' and dow != 'Sunday' and check_date not in days_off:
             
             # if the check date is a day I have class, create an event
-            if dow in class_days[-1] and status == 'Enrolled':
-                # Add event title
-                course_names.append(row['Offering Name'])
-                
+            if dow in class_days[-1] and status == 'Enrolled':                
                 # Add event description
                 section = row['Section/Instructor'][0:2]
                 instructor = row['Section/Instructor'][3:]
@@ -164,7 +181,26 @@ for index, row in df.iterrows():
                 end_time.append(times[1])
                 
                 # Add Location
-                locations.append(row['Location'])
+                # if line only has two things (ex: ['TR', '09:00-10:25']), locations = ['128', 'BAX']
+                # ['WF', '15:00-15:55', 'MR', '15:00-15:55'] --> ['201', 'BRG', '102', 'STL']
+                # absolutely awful way to do this - I will find a better way to do this later  
+                placeholder = row['Location']
+                if len(line) > 2:
+                    placeholder = placeholder.split(' ')
+                    if len(placeholder) == 5:
+                        placeholder = [placeholder[0]+' '+placeholder[1]+' '+placeholder[2], placeholder[3]+' '+placeholder[4]]
+                    elif len(placeholder) == 4:
+                        placeholder = [placeholder[0]+' '+placeholder[1], placeholder[2]+' '+placeholder[3]]
+                
+                if dow in recitation_days:
+                    # Add event title
+                    course_names.append('[Recitation] ' + row['Offering Name'])
+                    locations.append(placeholder[1])
+                else:
+                    # Add event title
+                    course_names.append(row['Offering Name'])
+                    locations.append(placeholder[0])
+                
                 
         check_date += datetime.timedelta(days=1)
             
@@ -174,5 +210,9 @@ outputDF['Start Date'] = dates
 outputDF['Start  Time'] = start_time
 outputDF['End Time'] = end_time
 outputDF['Location'] = locations
-outputDF.to_csv('CaltechCalOutput.csv', index=False)
+try:
+    outputDF.to_csv('CaltechCalOutput.csv', index=False)
+except PermissionError:
+    print('ERROR. Please close CaltechCalOutput.csv and try again.')
+    exit(1)
 print('Output File Generated')
