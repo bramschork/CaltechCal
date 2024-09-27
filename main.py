@@ -1,9 +1,9 @@
 '''
 Author: Bram Schork
-Date: January 2023
+Date: Sep 2024
 
 Version: 2.1.1
-Academic Year: 2022-23
+Academic Year: 2024-25
 
 Version Notes: 
  - Program optionally creates file to make manual schedule edits (to change room location)
@@ -15,17 +15,20 @@ Version Notes:
 '''
 
 # 2022-23 Academic Year Dates
-start_dates = ['09-27-2022', '01-04-2023', '04-03-2023'] # beginning of instruction
-end_dates = ['12-02-2022', '03-10-2023', '06-09-2023'] # last day of classes
-days_off_raw = ['11-24-2022', '11-25-2022', '01-16-2023', '02-20-2023', '05-29-2023']
+import sys
+import os
+from tkinter import filedialog
+import tkinter as tk
+import calendar
+import datetime
+import pandas as pd
+start_dates = ['09-30-2024', '01-06-2025',
+               '03-31-2025']  # beginning of instruction
+end_dates = ['12-06-2024', '03-12-2025', '06-06-2025']  # last day of classes
+days_off_raw = ['11-28-2024', '11-29-2024',
+                '01-20-2025', '02-17-2025', '05-26-2025']
 
 ### IMPORTS ###
-import pandas as pd
-import datetime
-import calendar
-import tkinter as tk
-from tkinter import filedialog
-import os, sys
 
 # Set environment variable to silence TK
 os.environ['TK_SILENCE_DEPRECATION'] = '1'
@@ -38,7 +41,9 @@ root.lift()
 root.withdraw()
 
 # Get class file from user
-path = filedialog.askopenfilename(filetypes=(("HTML Files","*.html"),))
+path = filedialog.askopenfilename(
+    filetypes=(("HTML Files", "*.html;*.htm"),)
+)
 
 # Error out if no file is given
 while path == '':
@@ -49,13 +54,15 @@ while path == '':
 term = input('Select term:\nFall (0)\nWinter (1)\nSpring (2)\n------------\n')
 
 while term not in ['0', '1', '2']:
-    term = input('Select term:\nFall (0)\nWinter (1)\nSpring (2)\n------------\n')
+    term = input(
+        'Select term:\nFall (0)\nWinter (1)\nSpring (2)\n------------\n')
 
 term = int(term)
 
 manual_edit = ''
 while manual_edit not in ['y', 'n']:
-    manual_edit = input('Would you like to create a class file to make manual changes(adjust class location, drop class, etc.)?\nType y or n:\n')
+    manual_edit = input(
+        'Would you like to create a class file to make manual changes(adjust class location, drop class, etc.)?\nType y or n:\n')
 
 # Turn date strings into datetime objects
 start_date = datetime.datetime.strptime(start_dates[term], '%m-%d-%Y')
@@ -79,19 +86,20 @@ days_of_week = {
 }
 
 
-def getDOW(vals):  
+def getDOW(vals):
     '''
     getDOW takes in a takes of values and converts their abbreviations to their full names.
     It does this using the days_of_week dictionary.
     The function returns a list contians the full names in the same order as they came in.
-    '''  
-    
+    '''
+
     i = 0
     DOW = []
-    while i < len(vals): 
+    while i < len(vals):
         DOW.append(vals[i])
         i += 1
     return DOW
+
 
 # check_date is a var that I will iterate through to check every day of the term
 check_date = start_date
@@ -119,36 +127,35 @@ if manual_edit == 'y':
     except PermissionError:
         print('ERROR. Please close MANUAL_EDIT.csv and try again.')
         exit(1)
-    
 
 
 for index, row in df.iterrows():
-    
+
     # Start adding classes on the first day of the term
     check_date = start_date
-    
+
     # Class days is a list containing the full DOW of days I have class
     class_days = []
-    line = row['Days/Time'] #Ex. MTR 11:00-11:55 W 14:00-14:55
+    line = row['Days/Time']  # Ex. MTR 11:00-11:55 W 14:00-14:55
     line = line.split(' ')
     abbreviated_names = []
     class_times = []
     all_class_days = []
     status = row['Status']
     recitation_days = []
-    
+
     i = 0
-    while i < len(line):        
+    while i < len(line):
         # If not numeric, meaning it is a DOW (do this by checking first character)
         if not line[i][0].isnumeric():
             abbreviated_names.append([getDOW(line[i]), line[i + 1]])
         i += 1
-        
+
     for item in abbreviated_names:
         for day in item[0]:
             all_class_days.append(days_of_week[day])
             class_days.append([days_of_week[day], item[1]])
-            
+
     if len(abbreviated_names) > 1:
         abbreviated_recitation_days = abbreviated_names[1][0]
         if len(abbreviated_recitation_days) == 1:
@@ -156,46 +163,49 @@ for index, row in df.iterrows():
         else:
             for item in abbreviated_recitation_days:
                 recitation_days.append(days_of_week[item])
-                    
+
     # make all class days final item of list
     class_days.append(all_class_days)
 
     while check_date <= end_date:
         # Get full DOW from check_date
         dow = (calendar.day_name[check_date.weekday()])
-        
+
         if dow != 'Saturday' and dow != 'Sunday' and check_date not in days_off:
-            
+
             # if the check date is a day I have class, create an event
-            if dow in class_days[-1] and status == 'Enrolled':                
+            if dow in class_days[-1] and status == 'Enrolled':
                 # Add event description
                 section = row['Section/Instructor'][0:2]
                 instructor = row['Section/Instructor'][3:]
                 units = row['Units']
-                descriptions.append('Section: {}\nInstructor: {}\nUnits: {}\n\nOffering Title & Class Info:\n{}\n'.format(section, instructor, units, row['Offering Title']))
+                descriptions.append('Section: {}\nInstructor: {}\nUnits: {}\n\nOffering Title & Class Info:\n{}\n'.format(
+                    section, instructor, units, row['Offering Title']))
 
                 # Add start date
                 dates.append(check_date)
-                
+
                 # Add Class Time
                 for item in class_days[0:-1]:
                     if item[0] == dow:
                         times = item[1].split('-')
                 start_time.append(times[0])
                 end_time.append(times[1])
-                
+
                 # Add Location
                 # if line only has two things (ex: ['TR', '09:00-10:25']), locations = ['128', 'BAX']
                 # ['WF', '15:00-15:55', 'MR', '15:00-15:55'] --> ['201', 'BRG', '102', 'STL']
-                # absolutely awful way to do this - I will find a better way to do this later  
+                # absolutely awful way to do this - I will find a better way to do this later
                 placeholder = row['Location']
                 if len(line) > 2:
                     placeholder = placeholder.split(' ')
                     if len(placeholder) == 5:
-                        placeholder = [placeholder[0]+' '+placeholder[1]+' '+placeholder[2], placeholder[3]+' '+placeholder[4]]
+                        placeholder = [placeholder[0]+' '+placeholder[1]+' ' +
+                                       placeholder[2], placeholder[3]+' '+placeholder[4]]
                     elif len(placeholder) == 4:
-                        placeholder = [placeholder[0]+' '+placeholder[1], placeholder[2]+' '+placeholder[3]]
-                
+                        placeholder = [
+                            placeholder[0]+' '+placeholder[1], placeholder[2]+' '+placeholder[3]]
+
                 if dow in recitation_days:
                     # Add event title
                     course_names.append('[Recitation] ' + row['Offering Name'])
@@ -203,14 +213,13 @@ for index, row in df.iterrows():
                 elif type(placeholder) != list:
                     course_names.append(row['Offering Name'])
                     locations.append(placeholder)
-                else:    
+                else:
                     # Add event title
                     course_names.append(row['Offering Name'])
                     locations.append(placeholder[0])
-                
-                
+
         check_date += datetime.timedelta(days=1)
-            
+
 outputDF['Subject'] = course_names
 outputDF['Description'] = descriptions
 outputDF['Start Date'] = dates
